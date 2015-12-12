@@ -39,13 +39,13 @@ Date: %s
 )
 
 var (
-	httpsAddr = flag.String("httpsAddr", "localhost:10443", "address to boot the HTTPS server on")
-	httpAddr  = flag.String("httpAddr", "localhost:10080", "address to boot the HTTP server on")
-	rawVHost  = flag.String("vhost", "localhost:10443", "public domain to use in redirects and templates")
-	certPath  = flag.String("cert", "./config/development.crt", "file path to the TLS certificate to serve with")
-	keyPath   = flag.String("key", "./config/development.key", "file path to the TLS key to serve with")
-	staticDir = flag.String("staticDir", "./static", "file path to the directory of static files to serve")
-	tmplDir   = flag.String("templateDir", "./templates", "file path to the directory of templates")
+	httpsAddr = flag.String("httpsAddr", "10.0.0.4:10443", "address to boot the HTTPS server on")
+	httpAddr  = flag.String("httpAddr", "10.0.0.4:10080", "address to boot the HTTP server on")
+	rawVHost  = flag.String("vhost", "sslgovm.cloudapp.net:443", "public domain to use in redirects and templates")
+	certPath  = flag.String("cert", "..\\src\\github.com\\jmhodges\\howsmyssl\\config\\development.crt", "file path to the TLS certificate to serve with")
+	keyPath   = flag.String("key", "..\\src\\github.com\\jmhodges\\howsmyssl\\config\\development.key", "file path to the TLS key to serve with")
+	staticDir = flag.String("staticDir", "..\\src\\github.com\\jmhodges\\howsmyssl\\static", "file path to the directory of static files to serve")
+	tmplDir   = flag.String("templateDir", "..\\src\\github.com\\jmhodges\\howsmyssl\\templates", "file path to the directory of templates")
 	adminPort = flag.String("adminPort", "4567", "localhost port to boot the admin server on")
 
 	apiVars         = expvar.NewMap("api")
